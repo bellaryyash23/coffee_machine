@@ -56,7 +56,10 @@ def coffee_machine():
             water = resources["water"]
             milk = resources["milk"]
             coffee = resources["coffee"]
-            money = resources["money"]
+            try:
+                money = resources["money"]
+            except KeyError:
+                money = 0
             print(f"Water: {water}ml.")
             print(f"Milk: {milk}ml")
             print(f"Coffee: {coffee}gm")
